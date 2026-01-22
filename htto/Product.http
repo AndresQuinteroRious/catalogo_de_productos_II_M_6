@@ -1,0 +1,91 @@
+### OBTENER UNA LISTA DE TODOS LOS PRODUCTOS 
+
+GET http://localhost:8080/api/productos
+
+### CREAR UN PRODUCTO
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+    "name" : "Iphone 15 pro max",
+    "price": 2.500000,
+    "description" : "Iphone nuevo con 1 a;o de garantia",
+    "especification":{
+        "marca" : "IPHONE",
+        "capacidad": "256gb"
+    },
+    "tags":[
+        "ELECTRONICA",
+        "CELULAR"
+    ]
+}
+
+### CREAR UN PRODUCTO
+POST http://localhost:8080/api/productos
+Content-Type: application/json
+
+{
+    "name" : "las 48 leyes del poder",
+    "price": 18000.00,
+    "description" : "Libro escrito por robet greene",
+    "especification":{
+        "tipo" : "crecimiento personal",
+        "numero de paginas": "628"
+    },
+    "tags":[
+        "LIBRO",
+        "CRECIMIENTO"
+    ]
+}
+
+### OBTENER PRODUCTO POR ID 
+GET http://localhost:8080/api/product/696721ec694b3c3115425780
+
+### ACTUALIZAR INFORMACION DE UN PRODUCTO
+PUT http://localhost:8080/api/product/696721ec694b3c3115425780
+Content-Type: application/json
+
+{
+    "name" : "Iphone 15 pro max",
+    "price": 25000.000,
+    "description" : "Iphone nuevo con 1 año de garantia",
+    "especification":{
+        "marca" : "IPHONE",
+        "capacidad": "256gb"
+    },
+    "tags":[
+        "ELECTRONICA",
+        "CELULAR"
+    ]
+}
+
+### ACTUALIZAR INFORMACION DE UN PRODUCTO
+PUT http://localhost:8080/api/product/69672325694b3c3115425787
+Content-Type: application/json
+
+{
+   "name" : "las 48 leyes del poder",
+    "price": 25000.0,
+    "description" : "Libro escrito por robert greene",
+    "especification":{
+        "tipo" : "crecimiento personal",
+        "numero de paginas": "628"
+    },
+    "tags":[
+        "LIBRO",
+        "CRECIMIENTO"
+    ]
+}
+
+### eliminar un produc
+DELETE http://localhost:8080/api/product/69672325694b3c3115425787
+
+### buscar producto por texto
+GET http://localhost:8080/api/product/find?b=po
+
+
+### BUSCAR PRODUCTO POR TAG
+GET http://localhost:8080/api/product/tag?b=ELECTRONICA
+
+### obtener product por especificaciones
+GET http://localhost:8080/api/product/especificacion?k=tipo&v=crecimiento personal
